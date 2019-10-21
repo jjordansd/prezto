@@ -33,7 +33,7 @@ source <(minikube completion zsh)
 
 
 fpath=(/Users/jacquesjordan/.zsh/gradle-completion $fpath)
-export HOMEBREW_GITHUB_API_TOKEN=0e86cf26e8fb9a7e559a6105286e97bfb2b26b43
+export HOMEBREW_GITHUB_API_TOKEN=34dd4d553f51fe448c55697216fce374d0427252
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/jacquesjordan/.sdkman"
