@@ -11,3 +11,36 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+source ~/.iterm2_shell_integration.zsh
+export PATH=$HOME/bin:/usr/local/bin:$HOME/Projects/confluent-4.0.0/bin:/Users/jacquesjordan/jProjects/activemq-cli-0.5.0/bin:$PATH
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home # /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+export KUBECONFIG=~/.kube/config-devel
+export APP_TRUNK=~/Projects/NewAppFraud
+export APP_FRAUD_INSTALL=$APP_TRUNK/afm-packaging/target/afm-install-3.4.0-SNAPSHOT
+export COPY_DB_PROPERTIES='cp $AFM_HOME/install_db.properties $APP_FRAUD_INSTALL/.'
+source ~/.afm34.env
+
+# AFM Properties 
+export MAVEN_OPTS="-Xmx2512m -XX:MaxMetaspaceSize=512m"
+plugins=(kops git)
+
+fpath=(~/.zsh/completion $fpath)
+
+autoload -Uz compinit && compinit -i
+source <(kops completion zsh)
+source <(minikube completion zsh)
+
+
+
+fpath=(/Users/jacquesjordan/.zsh/gradle-completion $fpath)
+export HOMEBREW_GITHUB_API_TOKEN=0e86cf26e8fb9a7e559a6105286e97bfb2b26b43
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/jacquesjordan/.sdkman"
+[[ -s "/Users/jacquesjordan/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jacquesjordan/.sdkman/bin/sdkman-init.sh"
+export PATH="~/bin:/Users/jacquesjordan/bin/Sencha/Cmd:$PATH"
+# For My Proxy Tunnel
+alias proxy-on='ssh -fN fwswin'
+alias proxy-check='ssh -O check fwswin'
+alias proxy-off='ssh -O exit fwswin'
+export PATH="/usr/local/opt/go@1.10/bin:$PATH"
