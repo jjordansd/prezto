@@ -14,7 +14,7 @@ fi
 source ~/.iterm2_shell_integration.zsh
 export PATH=$HOME/bin:/usr/local/bin:$HOME/Projects/confluent-4.0.0/bin:/Users/jacquesjordan/jProjects/activemq-cli-0.5.0/bin:$PATH
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home # /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
-export KUBECONFIG=~/.kube/config-devel
+# export KUBECONFIG=~/.kube/config-devel
 export APP_TRUNK=~/Projects/NewAppFraud
 export APP_FRAUD_INSTALL=$APP_TRUNK/afm-packaging/target/afm-install-3.4.0-SNAPSHOT
 export COPY_DB_PROPERTIES='cp $AFM_HOME/install_db.properties $APP_FRAUD_INSTALL/.'
